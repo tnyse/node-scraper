@@ -25,8 +25,7 @@ axios(url)
             const title = $(this).find('p','title').html()
             const url = $(this).find('a').attr('href')
             const date = $(this).find('p[class=sub-label]').html().slice(7)
-            const img = $(this).find('img').attr('src')
-
+            const img = $(this).find('img[class=post-image.rectangle]').html()
 
            articles.push({
                title,
@@ -40,7 +39,7 @@ axios(url)
         debugger;
 
 
-        console.log('hey:', html );
+        // console.log('hey:', html );
     }
 ).catch(err => console.log(err))
 
